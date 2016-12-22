@@ -11,6 +11,7 @@ public class StartEventHandler implements ApplicationListener<ContextRefreshedEv
 	private Publisher publisher;
 	
 	public void onApplicationEvent(ContextRefreshedEvent event) {
+		System.out.println("StartEventHandler listener");
 		publisher.publish("test message1");
 		publisher.publish("test message2");
 	}
