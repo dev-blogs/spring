@@ -29,7 +29,7 @@ public class App {
 		System.out.println(messageSource.getMessage("msg", null, english));
 		System.out.println(messageSource.getMessage("msg", null, russian));
 		
-		System.out.println(messageSource.getMessage("nameMsg", new Object[] { "Clarence", "Ho"}, english));
-		System.out.println(messageSource.getMessage("nameMsg", new Object[] { "Clarence", "Ho"}, russian));
+		System.out.println(messageSource.getMessage("nameMsg", new Object[] { "Name1", "Name2"}, english));
+		System.out.println(messageSource.getMessage("nameMsg", new Object[] { "Name1", "Name2"}, russian));
 	}
 }
