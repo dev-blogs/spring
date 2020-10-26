@@ -3,9 +3,38 @@
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans
 			http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+			
+	<bean id="object" class="java.lang.Object" />
 	
 	<bean id="messageProvider" class="com.example.MessageProvider">
-		<property name="message" value="test" />
+		<property name="list">
+			<list>
+				<value>test in list</value>
+				<ref local="object" />
+			</list>
+		</property>
+		<property name="set">
+			<set>
+				<value>test in set</value>
+				<ref local="object" />
+			</set>
+		</property>
+		<property name="map">
+			<map>
+				<entry key="key1">
+					<value>test in map</value>
+				</entry>
+				<entry key="key2">
+					<ref bean="object" />
+				</entry>
+			</map>
+		</property>
+		<property name="props">
+			<props>
+				<prop key="prop1">test in prop1</prop>
+				<prop key="prop2">test in prop2</prop>
+			</props>
+		</property>
 	</bean>
 	
 </beans>

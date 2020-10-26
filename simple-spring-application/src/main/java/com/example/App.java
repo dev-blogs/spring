@@ -9,6 +9,6 @@ public class App {
 		context.refresh();
 		
 		MessageProvider messageProvider = (MessageProvider) context.getBean("messageProvider");
-		System.out.println(messageProvider.getMessage());
+		System.out.println(messageProvider);
 	}
 }
