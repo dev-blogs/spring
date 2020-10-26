@@ -5,44 +5,21 @@ import java.util.Map;
 import java.util.Properties;
 import java.util.Set;
 
+import javax.annotation.Resource;
+
+import org.springframework.stereotype.Service;
+
+@Service
 public class MessageProvider {
+	@Resource(name="list")
 	private List<Object> list;
+	@Resource(name="set")
 	private Set<Object> set;
+	@Resource(name="map")
 	private Map<String, Object> map;
+	@Resource(name="props")
 	private Properties props;
 	
-	public List<Object> getList() {
-		return list;
-	}
-	
-	public void setList(List<Object> list) {
-		this.list = list;
-	}
-	
-	public Set<Object> getSet() {
-		return set;
-	}
-	
-	public void setSet(Set<Object> set) {
-		this.set = set;
-	}
-	
-	public Map<String, Object> getMap() {
-		return map;
-	}
-	
-	public void setMap(Map<String, Object> map) {
-		this.map = map;
-	}
-	
-	public Properties getProps() {
-		return props;
-	}
-	
-	public void setProps(Properties props) {
-		this.props = props;
-	}
-
 	@Override
 	public String toString() {
 		return "MessageProvider [list=" + list + ", set=" + set + ", map=" + map + ", props=" + props + "]";
